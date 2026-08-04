@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My E-Commerce Shop</title>
+
+<style>
+body{
+    font-family: Arial;
+    margin:0;
+    background:#f4f4f4;
+}
+
+header{
+    background:#222;
+    color:white;
+    padding:20px;
+    text-align:center;
+}
+
+.products{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+    padding:20px;
+}
+
+.card{
+    background:white;
+    width:220px;
+    padding:15px;
+    text-align:center;
+    border-radius:10px;
+    box-shadow:0 0 10px gray;
+}
+
+.card img{
+    width:150px;
+    height:150px;
+}
+
+button{
+    background:#28a745;
+    color:white;
+    border:none;
+    padding:10px;
+    cursor:pointer;
+    border-radius:5px;
+}
+
+button:hover{
+    background:#218838;
+}
+
+.cart{
+    background:white;
+    margin:20px;
+    padding:20px;
+    border-radius:10px;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+<h1>vijay book store</h1>
+<p>Online Shopping Website</p>
+</header>
+
+
+<div class="products">
+
+<div class="card">
+<img src="https://via.placeholder.com/150">
+<h2>book</h2>
+<p>Price: ₹1500</p>
+<button onclick="addCart('Mobile Phone',15000)">
+Add To Cart
+</button>
+</div>
+
+
+<div class="card">
+<img src="https://via.placeholder.com/150">
+<h2>pen</h2>
+<p>Price: ₹500</p>
+<button onclick="addCart('Laptop',50000)">
+Add To Cart
+</button>
+</div>
+
+
+<div class="card">
+<img src="https://via.placeholder.com/150">
+<h2>colour box</h2>
+<p>Price: ₹200</p>
+<button onclick="addCart('Headphone',2000)">
+Add To Cart
+</button>
+</div>
+
+</div>
+
+
+<div class="cart">
+
+<h2>Shopping Cart</h2>
+
+<ul id="cartList"></ul>
+
+<h3>Total: ₹<span id="total">0</span></h3>
+
+</div>
+
+
+<script>
+
+let total = 0;
+
+function addCart(name,price){
+
+let li=document.createElement("li");
+
+li.innerHTML=name+" - ₹"+price;
+
+document.getElementById("cartList").appendChild(li);
+
+
+total = total + price;
+
+document.getElementById("total").innerHTML=total;
+
+}
+
+</script>
+
+
+</body>
+</html>
