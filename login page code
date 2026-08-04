@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Login</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #e8f1ff;
+        }
+
+        .login-container {
+            width: 350px;
+            background: white;
+            padding: 25px;
+            margin: 100px auto;
+            border-radius: 10px;
+            box-shadow: 0 0 15px gray;
+        }
+
+        h2 {
+            text-align: center;
+            color: #0066cc;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0 15px;
+            border: 1px solid #aaa;
+            border-radius: 5px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #0066cc;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #004c99;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="login-container">
+
+    <h2>Employee Login</h2>
+
+    <form>
+
+        <label>Employee ID</label>
+        <input type="text" placeholder="Enter Employee ID">
+
+        <label>Email</label>
+        <input type="email" placeholder="Enter Email">
+
+        <label>Password</label>
+        <input type="password" placeholder="Enter Password">
+
+        <button type="submit">Login</button>
+
+    </form>
+
+    <div class="footer">
+        <p>New Employee? Register Here</p>
+    </div>
+
+</div>
+
+</body>
+</html>
